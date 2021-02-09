@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_game"
+    app:startDestination="@id/GameFragment">
+
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="be.vives.ti.bibuntitled.ui.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_GameFragment_to_TeamFragment"
+            app:destination="@id/TeamFragment" />
+        <argument
+            android:name="User"
+            app:argType="be.vives.ti.bibuntitled.data.User" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="be.vives.ti.bibuntitled.ui.chat.ChatFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_chat">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/TeamFragment"
+        android:name="be.vives.ti.bibuntitled.ui.team.TeamFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_team"/>
+    <fragment
+        android:id="@+id/selectQuestionFragment"
+        android:name="be.vives.ti.bibuntitled.ui.question.SelectQuestionFragment"
+        android:label="fragment_question_select"
+        tools:layout="@layout/fragment_question_select"/>
+
+
+    <fragment
+        android:id="@+id/invulQuestionFragment"
+        android:name="be.vives.ti.bibuntitled.ui.question.InvulQuestionFragment"
+        android:label="fragment_question_invul"
+        tools:layout="@layout/fragment_question_invul"/>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="be.vives.ti.bibuntitled.ui.question.feedback.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/scoreboardFragment"
+        android:name="be.vives.ti.bibuntitled.ui.scoreboard.ScoreboardFragment"
+        android:label="ScoreboardFragment" />
+    <fragment
+        android:id="@+id/checkedQuestionFragment"
+        android:name="be.vives.ti.bibuntitled.ui.question.CheckedQuestionFragment"
+        android:label="CheckedQuestionFragment" />
+    <fragment
+        android:id="@+id/statistiekFragment"
+        android:name="be.vives.ti.bibuntitled.ui.statistiek.StatistiekFragment"
+        android:label="fragment_statistiek"
+        tools:layout="@layout/fragment_statistiek" >
+        <action
+            android:id="@+id/action_statistiekFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="be.vives.ti.bibuntitled.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_plattegrondFragment"
+            app:destination="@id/plattegrondFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_contactFragment"
+            app:destination="@id/contactFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/fragment_close_enter" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_gameActivity"
+            app:destination="@id/gameActivity"
+            app:enterAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/plattegrondFragment"
+        android:name="be.vives.ti.bibuntitled.ui.plattegrond.PlattegrondFragment"
+        android:label="fragment_plattegrond"
+        tools:layout="@layout/fragment_plattegrond" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="be.vives.ti.bibuntitled.ui.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="be.vives.ti.bibuntitled.ui.contact.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="be.vives.ti.bibuntitled.ui.info.InfoFragment"
+        android:label="InfoFragment" />
+    <activity
+        android:id="@+id/gameActivity"
+        android:name="be.vives.ti.bibuntitled.GameActivity"
+        android:label="activity_game"
+        tools:layout="@layout/activity_game" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="be.vives.ti.bibuntitled.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@+id/registrerenFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registrerenFragment"
+        android:name="be.vives.ti.bibuntitled.ui.registreren.RegistrerenFragmentFragment"
+        android:label="RegistrerenFragment"
+        tools:layout="@layout/fragment_registreren">
+        <action
+            android:id="@+id/action_registrerenFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="be.vives.ti.bibuntitled.ui.news.NewsDetailFragment"
+        android:label="NewsDetailFragment" >
+        <argument
+            android:name="newsItem"
+            app:argType="be.vives.ti.bibuntitled.data.NewsItem" />
+    </fragment>
+
+
+</navigation>

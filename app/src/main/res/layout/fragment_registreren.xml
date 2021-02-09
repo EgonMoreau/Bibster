@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="be.vives.ti.bibuntitled.ui.registreren.RegistrerenViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.registreren.RegistrerenFragment"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/background_register">
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            tools:text="Wachtwoorden zijn niet gelijk." />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="@string/email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/wachtwoord"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="@string/wachtwoord"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/bevestigWachtwoord"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="@string/bevestigWachtwoord"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/voornaam"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="@string/voornaam"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/achternaam"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="@string/achternaam"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/richting"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:entries="@array/richtingen"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/campus"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:entries="@array/campussen"
+            android:textAlignment="center" />
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/registerBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:background="@drawable/button"
+            android:layout_gravity="center"
+            android:text="@string/register" />
+    </LinearLayout>
+
+</layout>

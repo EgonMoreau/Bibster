@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "825764268442",
+    "firebase_url": "https://bibun-e41ab.firebaseio.com",
+    "project_id": "bibun-e41ab",
+    "storage_bucket": "bibun-e41ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825764268442:android:5fa5b1a1f86d0b8bea1223",
+        "android_client_info": {
+          "package_name": "be.vives.ti.bibuntitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825764268442-iiohv78296g5823b5eqhb7rkg2un9lgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_ft1vwKKPi9rCpdOdBmUMh7j1vhLxoXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825764268442-iiohv78296g5823b5eqhb7rkg2un9lgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

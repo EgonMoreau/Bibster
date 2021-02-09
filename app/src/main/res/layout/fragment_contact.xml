@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.contact.ContactFragment" >
+    <data>
+
+        <variable
+            name="viewModel"
+            type="be.vives.ti.bibuntitled.ui.contact.ContactViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="675dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvTitel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="10dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:padding="15dp"
+            android:text="@{viewModel.campus.bibliotheek}"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contact"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTelefoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefoon"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/buttonTelefoon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_backgroud_change"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:text="@{viewModel.campus.telefoon}"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/buttonEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_backgroud_change"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:layout_margin="10dp"
+            android:text="@{viewModel.campus.email}"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/tvAdres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adres"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/buttonMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_backgroud_change"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:layout_margin="10dp"
+            android:text="@{viewModel.campus.adres}"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/tvWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Website"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/buttonWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_backgroud_change"
+            android:paddingStart="5sp"
+            android:paddingEnd="5sp"
+            android:layout_margin="10dp"
+            android:text="@{viewModel.campus.campus}"
+            android:textColor="@android:color/white" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSocial"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="Volg ons op"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <ImageButton
+                android:id="@+id/buttonInstagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/logo_instagram"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSocial" />
+
+            <ImageButton
+                android:id="@+id/buttonFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/logo_facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonInstagram"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSocial" />
+
+            <ImageButton
+                android:id="@+id/buttonPinterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/logo_pinterest"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonInstagram"
+                app:layout_constraintTop_toBottomOf="@+id/tvSocial" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="richtingen" >
+        <item>Informatica</item>
+        <item>Marketing</item>
+    </string-array>
+    <string-array name="campussen" >
+        <item>Kortrijk</item>
+        <item>Brugge</item>
+    </string-array>
+</resources>
